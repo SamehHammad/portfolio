@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Gumela;
+  src: url('./components/assets/Gumela.otf');
+}
+
+body {
+  font-family: Gumela;
+}
+
+:root {
+  --color: #2d2e2e;
+}
