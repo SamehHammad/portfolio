@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.06fda5eb.css",
-    "main.js": "/portfolio/static/js/main.b8a96b8e.js",
+    "main.css": "/portfolio/static/css/main.6c9ac965.css",
+    "main.js": "/portfolio/static/js/main.774c1169.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Sameh Hammad_CV.pdf": "/portfolio/static/media/Sameh Hammad_CV.be8e1324a7f0da4705d3.pdf",
     "static/media/milion.png": "/portfolio/static/media/milion.8905b397b103a7ab065e.png",
@@ -18,12 +18,12 @@
     "static/media/css.png": "/portfolio/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/portfolio/index.html",
-    "main.06fda5eb.css.map": "/portfolio/static/css/main.06fda5eb.css.map",
-    "main.b8a96b8e.js.map": "/portfolio/static/js/main.b8a96b8e.js.map",
+    "main.6c9ac965.css.map": "/portfolio/static/css/main.6c9ac965.css.map",
+    "main.774c1169.js.map": "/portfolio/static/js/main.774c1169.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.06fda5eb.css",
-    "static/js/main.b8a96b8e.js"
+    "static/css/main.6c9ac965.css",
+    "static/js/main.774c1169.js"
   ]
 }
