@@ -8,7 +8,7 @@ const Navbar = () => {
     link2: 'work',
     link3: 'skills',
     link4: 'About',
-    link5: 'Contact',
+    link5: 'Contact Me',
   };
 
   const [nav, setNave] = useState(false);
@@ -50,6 +50,11 @@ const Navbar = () => {
               <li className="">
                 <Link to="skills" smooth={true} duration={500}>
                   {navbar.link3}
+                </Link>
+              </li>
+              <li className="">
+                <Link to="Contact" smooth={true} duration={500}>
+                  {navbar.link5}
                 </Link>
               </li>
               {/* <li className="">
@@ -99,6 +104,16 @@ const Navbar = () => {
               duration={500}
             >
               {navbar.link3}
+            </Link>
+          </li>
+          <li className=" py-6 text-4xl ">
+            <Link
+              onClick={clickHndler}
+              to="Contact"
+              smooth={true}
+              duration={500}
+            >
+              {navbar.link5}
             </Link>
           </li>
           

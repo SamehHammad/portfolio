@@ -1,0 +1,12 @@
+
+input, select, textarea{
+    color: #ff0000;
+}
+
+textarea:focus, input:focus {
+    color: #ff0000;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}

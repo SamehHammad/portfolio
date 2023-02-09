@@ -7,6 +7,7 @@ import Footer from './components/footer/footer';
 import './App.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import ContactMe from './components/contact/ContactMe';
 // import Contact from './components/';
 
 function App ()
@@ -22,6 +23,7 @@ Aos.refresh()
       <Home />
       <Projects />
       <Skills />
+      <ContactMe />
       <Footer/>
     </>
   );
