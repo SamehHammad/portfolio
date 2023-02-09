@@ -9,7 +9,6 @@ const ContactMe = () => {
   const [email, setEmail] = useState("");
   const [massege, setMassege] = useState("");
   const handleValue = (e) => {
-    e.preventDefault();
     if (email.includes("@") && name) {
       emailjs
         .sendForm(
