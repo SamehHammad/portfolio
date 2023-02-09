@@ -9,7 +9,7 @@ const Button = () => {
         href={pdf}
         download
       >
-        My Reasum
+        My Resume 
       </a>
     </>
   );

@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-scroll';
-import Button from '../button/Button';
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
+import Button from "../button/Button";
+import "./navbar.css";
 const Navbar = () => {
   const navbar = {
-    link1: 'home',
-    link2: 'work',
-    link3: 'skills',
-    link4: 'About',
-    link5: 'Contact Me',
+    link1: "home",
+    link2: "work",
+    link3: "skills",
+    link4: "About",
+    link5: "Contact Me",
   };
 
   const [nav, setNave] = useState(false);
@@ -26,7 +27,9 @@ const Navbar = () => {
             data-aos="zoom-in-right"
             className="logo font-bold text-4xl ml-4 text-rose-400 "
           >
-            <h1>SAMEH</h1>
+            <h1>
+              SA<span>MEH</span>
+            </h1>
           </div>
         </div>
         <div
@@ -77,8 +80,8 @@ const Navbar = () => {
         <ul
           className={
             !nav
-              ? 'hidden'
-              : 'absolute z-10 bg-[#5031a9] bg-opacity-70 font-bold top-0 left-0 w-full  h-screen flex flex-col justify-center items-center cursor-pointer	'
+              ? "hidden"
+              : "absolute z-10 bg-[#5031a9] bg-opacity-70 font-bold top-0 left-0 w-full  h-screen flex flex-col justify-center items-center cursor-pointer	"
           }
         >
           <li className=" py-6 text-4xl">
@@ -116,7 +119,9 @@ const Navbar = () => {
               {navbar.link5}
             </Link>
           </li>
-          
+          <li className="py-6 text-4xl">
+            <Button />
+          </li>
         </ul>
       </nav>
     </div>
