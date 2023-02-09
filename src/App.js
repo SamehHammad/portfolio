@@ -8,10 +8,13 @@ import './App.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import ContactMe from './components/contact/ContactMe';
+import { useSelector } from 'react-redux';
 // import Contact from './components/';
 
 function App ()
 {
+  const { mode } = useSelector((state) => state.darkMode);
+
   useEffect( () =>
   {
     Aos.init()
@@ -19,12 +22,15 @@ Aos.refresh()
   },[])
   return (
     <>
-      <Navbar />
+    <div className={mode?'m-dark':'m-light'}>
+    <Navbar/>
       <Home />
       <Projects />
       <Skills />
       <ContactMe />
       <Footer/>
+    </div>
+     
     </>
   );
 }

@@ -1,8 +1,18 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
-import introImg from "./Startup life.gif";
+import introLightImg from "./intro-light.gif";
+import introDarkImg from "./intro-dark.gif";
 import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect";
+import { useDispatch, useSelector } from "react-redux";
+import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { changeMode } from "../slice/modeSlice";
+import './intro.css'
+
 const Intro = () => {
+  const dispatch = useDispatch();
+
+  const { mode } = useSelector((state) => state.darkMode);
+
   const intro = {
     name: "Sameh Hammad",
     jobTitle: "Front End Web Developer",
@@ -14,7 +24,22 @@ const Intro = () => {
           className="intro
         flex flex-col justify-center h-screen capitalize max-w[1000px] mx-auto px-8 lg:justify-center lg:items-center"
         >
-           <p className="font-bold text-xl sm:text-4xl ">hi my name is </p>
+          <div>
+        <div id="darkmode">
+          <input
+            type="checkbox"
+            className="checkbox"
+            id="checkbox"
+            onClick={() => dispatch(changeMode())}
+          />
+          <label htmlFor="checkbox" className="label">
+            <BsMoonStarsFill color="white" style={{ fontSize: "12px" }} />
+            <BsFillSunFill color="yellow" style={{ fontSize: "12px" }} />
+            <div className="ball"></div>
+          </label>
+        </div>
+      </div>
+          <p className="font-bold text-xl sm:text-4xl ">hi my name is </p>
           <h4
             data-aos="fade-right"
             className="text-yellow-400 font-bold text-4xl sm:text-6xl "
@@ -53,11 +78,11 @@ const Intro = () => {
         </div>
       </div>
       <div className=" flex-1">
-        <div className="md:block w-100 mt-32 mr-16 hidden ">
+        <div className="md:block w-100 mt-32 mr-16 hidden">
           <img
             data-aos="fade-left"
-            className="rounded-3xl lg:w-[100%]"
-            src={introImg}
+            className="rounded-3xl lg:w-[100%] "
+            src={mode?introDarkImg:introLightImg}
             alt="intro"
           ></img>
         </div>

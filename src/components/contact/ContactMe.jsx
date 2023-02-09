@@ -1,13 +1,31 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import "./contact.css";
 
 const ContactMe = () => {
+  const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [massege, setMassege] = useState("");
   const handleValue = (e) => {
+    e.preventDefault();
     if (email.includes("@") && name) {
+      emailjs
+        .sendForm(
+          "service_yyz7c43",
+          "template_chzwj99",
+          form.current,
+          "HI2yON0y98XYnchtZ"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
       Swal.fire(
         "تم إستلام رسالتك بنجاح",
         "Thanke You <b style=color:red;> " +
@@ -52,14 +70,14 @@ const ContactMe = () => {
         </div>
         <div className="w-full md:w-96 md:max-w-full mx-auto">
           <div className="p-6 border border-gray-300 sm:rounded-md">
-            <div>
+            <form ref={form}>
               <label className="block mb-6">
                 <span className="text-white-700">Your name</span>
                 <input
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   type="text"
-                  name="name"
+                  name="user_name"
                   className="
           h-10
           px-5
@@ -82,7 +100,7 @@ const ContactMe = () => {
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  name="email"
+                  name="user_email"
                   type="email"
                   className="
                   h-10
@@ -156,7 +174,7 @@ const ContactMe = () => {
                 )}
               </div>
               <div></div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

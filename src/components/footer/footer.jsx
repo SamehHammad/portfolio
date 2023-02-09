@@ -2,8 +2,6 @@ import React from "react";
 import {
   AiFillGithub,
   AiOutlineLinkedin,
-  AiOutlineMail,
-  AiOutlineMobile,
 } from "react-icons/ai";
 function Footer() {
   return (

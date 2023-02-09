@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link } from "react-scroll";
 import Button from "../button/Button";
 import "./navbar.css";
 const Navbar = () => {
+  const { mode } = useSelector((state) => state.darkMode);
+
   const navbar = {
     link1: "home",
     link2: "work",
@@ -19,8 +22,8 @@ const Navbar = () => {
   return (
     <div className="fixed w-full z-50">
       <nav
-        className="
-            w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#4c2da2] "
+      className={mode?"w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#413F3D]":"w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#4c2da2] "}
+       
       >
         <div className="n-left flex grow items-center gap-4">
           <div
