@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1416ddf6.css",
-    "main.js": "/portfolio/static/js/main.cff6711b.js",
+    "main.css": "/portfolio/static/css/main.0ec9a218.css",
+    "main.js": "/portfolio/static/js/main.9b4f7f94.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/intro-light.gif": "/portfolio/static/media/intro-light.419d49af3f8aa9e7ac25.gif",
     "static/media/Sameh Hammad_CV.pdf": "/portfolio/static/media/Sameh Hammad_CV.be8e1324a7f0da4705d3.pdf",
     "static/media/milion.png": "/portfolio/static/media/milion.8905b397b103a7ab065e.png",
     "static/media/books-store.png": "/portfolio/static/media/books-store.3d5b247a8f025f46077f.png",
+    "static/media/same7-tech.png": "/portfolio/static/media/same7-tech.c6d788f845393a7fe9e2.png",
     "static/media/intro-dark.gif": "/portfolio/static/media/intro-dark.29194eedc145edf44c6b.gif",
     "static/media/portfolio.png": "/portfolio/static/media/portfolio.0a0f8f78f8f3ae2b44dc.png",
     "static/media/bootstrap.png": "/portfolio/static/media/bootstrap.6b8a49b2289154350fa2.png",
@@ -19,12 +20,12 @@
     "static/media/css.png": "/portfolio/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/portfolio/index.html",
-    "main.1416ddf6.css.map": "/portfolio/static/css/main.1416ddf6.css.map",
-    "main.cff6711b.js.map": "/portfolio/static/js/main.cff6711b.js.map",
+    "main.0ec9a218.css.map": "/portfolio/static/css/main.0ec9a218.css.map",
+    "main.9b4f7f94.js.map": "/portfolio/static/js/main.9b4f7f94.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1416ddf6.css",
-    "static/js/main.cff6711b.js"
+    "static/css/main.0ec9a218.css",
+    "static/js/main.9b4f7f94.js"
   ]
 }
