@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 import { useDispatch, useSelector } from "react-redux";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { changeMode } from "../slice/modeSlice";
-import './intro.css'
+import "./intro.css";
 
 const Intro = () => {
   const dispatch = useDispatch();
@@ -25,20 +25,20 @@ const Intro = () => {
         flex flex-col justify-center h-screen capitalize max-w[1000px] mx-auto px-8 lg:justify-center lg:items-center"
         >
           <div>
-        <div id="darkmode">
-          <input
-            type="checkbox"
-            className="checkbox"
-            id="checkbox"
-            onClick={() => dispatch(changeMode())}
-          />
-          <label htmlFor="checkbox" className="label">
-            <BsMoonStarsFill color="white" style={{ fontSize: "12px" }} />
-            <BsFillSunFill color="yellow" style={{ fontSize: "12px" }} />
-            <div className="ball"></div>
-          </label>
-        </div>
-      </div>
+            <div id="darkmode">
+              <input
+                type="checkbox"
+                className="checkbox"
+                id="checkbox"
+                onClick={() => dispatch(changeMode())}
+              />
+              <label htmlFor="checkbox" className="label">
+                <BsMoonStarsFill color="white" style={{ fontSize: "12px" }} />
+                <BsFillSunFill color="yellow" style={{ fontSize: "12px" }} />
+                <div className="ball"></div>
+              </label>
+            </div>
+          </div>
           <p className="font-bold text-xl sm:text-4xl ">hi my name is </p>
           <h4
             data-aos="fade-right"
@@ -82,7 +82,7 @@ const Intro = () => {
           <img
             data-aos="fade-left"
             className="rounded-3xl lg:w-[100%] "
-            src={mode?introDarkImg:introLightImg}
+            src={mode ? introDarkImg : introLightImg}
             alt="intro"
           ></img>
         </div>

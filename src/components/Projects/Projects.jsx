@@ -2,12 +2,21 @@ import "./projects.css";
 import portfolio from "../assets/portfolio.png";
 import booksStore from "../assets/books-store.png";
 import milionWinner from "../assets/milion.png";
+import SamehTech from "../assets/same7-tech";
+
 
 
 //hover
 import {} from "react-icons/fa";
 const Projects = () => {
   const data = [
+    {
+      name: "Sameh Tech Store",
+      demo: "https://samehhammad.github.io/",
+      code: "https://github.com/SamehHammad/sameh-tech",
+      img: `${SamehTech}`,
+      lang: ["React", "bootstrap", "Redux tollkit"],
+    },
     {
       name: "Books Store",
       demo: "https://books-storet.surge.sh/",
