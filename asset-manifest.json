@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.42511a7c.css",
-    "main.js": "/portfolio/static/js/main.e71484bb.js",
+    "main.js": "/portfolio/static/js/main.dbb81ff0.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Sameh Hammad_CV.pdf": "/portfolio/static/media/Sameh Hammad_CV.be8e1324a7f0da4705d3.pdf",
     "static/media/intro-light.gif": "/portfolio/static/media/intro-light.96dfded6f4d4fe903836.gif",
@@ -11,6 +11,7 @@
     "static/media/intro-dark.gif": "/portfolio/static/media/intro-dark.29194eedc145edf44c6b.gif",
     "static/media/portfolio.png": "/portfolio/static/media/portfolio.0a0f8f78f8f3ae2b44dc.png",
     "static/media/bootstrap.png": "/portfolio/static/media/bootstrap.6b8a49b2289154350fa2.png",
+    "static/media/quran.png": "/portfolio/static/media/quran.2bbda25a9738bb47ecfc.png",
     "static/media/react2.png": "/portfolio/static/media/react2.86c8d9eba03e29814d2a.png",
     "static/media/node.png": "/portfolio/static/media/node.952a9ea986dcfa5229ad.png",
     "static/media/Gumela.otf": "/portfolio/static/media/Gumela.0ae83c6988a536716eb4.otf",
@@ -21,11 +22,11 @@
     "static/media/javascript.png": "/portfolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/portfolio/index.html",
     "main.42511a7c.css.map": "/portfolio/static/css/main.42511a7c.css.map",
-    "main.e71484bb.js.map": "/portfolio/static/js/main.e71484bb.js.map",
+    "main.dbb81ff0.js.map": "/portfolio/static/js/main.dbb81ff0.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42511a7c.css",
-    "static/js/main.e71484bb.js"
+    "static/js/main.dbb81ff0.js"
   ]
 }
