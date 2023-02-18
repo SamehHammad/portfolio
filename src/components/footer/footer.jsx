@@ -3,20 +3,22 @@ import {
   AiFillGithub,
   AiOutlineLinkedin,
 } from "react-icons/ai";
+import { useSelector } from "react-redux";
 function Footer() {
+  const { mode } = useSelector((state) => state.darkMode);
   return (
-    <div name="footer" className="w-full  text-whte justify-center p-4">
+    <div name="footer" className="w-full justify-center p-4">
       <hr />
       <ul className="flex justify-center text-center text-4xl mt-3 ">
         <li>
           <a href="https://github.com/SamehHammad">
-            <AiFillGithub />
+            <AiFillGithub style={{color:mode?"white":"black"}} />
           </a>
         </li>
 
         <li>
           <a href="https://www.linkedin.com/in/sameh-hammad-b20019246/">
-            <AiOutlineLinkedin />
+            <AiOutlineLinkedin style={{color:mode?"white":"black"}}/>
           </a>
         </li>
 

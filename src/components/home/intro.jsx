@@ -3,14 +3,10 @@ import introLightImg from "./intro-light.gif";
 import introDarkImg from "./intro-dark.gif";
 import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect";
-import { useDispatch, useSelector } from "react-redux";
-import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import { changeMode } from "../slice/modeSlice";
+import { useSelector } from "react-redux";
 import "./intro.css";
 
 const Intro = () => {
-  const dispatch = useDispatch();
-
   const { mode } = useSelector((state) => state.darkMode);
 
   const intro = {
@@ -18,27 +14,12 @@ const Intro = () => {
     jobTitle: "Front End Web Developer",
   };
   return (
-    <div name="home" className="flex w-full ">
-      <div className=" flex-1">
+    <div name="home" className="flex w-full intro-all" >
+      <div className=" flex-1 intro-text">
         <div
           className="intro
         flex flex-col justify-center h-screen capitalize max-w[1000px] mx-auto px-8 lg:justify-center lg:items-center"
         >
-          <div>
-            <div id="darkmode">
-              <input
-                type="checkbox"
-                className="checkbox"
-                id="checkbox"
-                onClick={() => dispatch(changeMode())}
-              />
-              <label htmlFor="checkbox" className="label">
-                <BsMoonStarsFill color="white" style={{ fontSize: "12px" }} />
-                <BsFillSunFill color="yellow" style={{ fontSize: "12px" }} />
-                <div className="ball"></div>
-              </label>
-            </div>
-          </div>
           <p className="font-bold text-xl sm:text-4xl ">hi my name is </p>
           <h4
             data-aos="fade-right"
@@ -77,8 +58,8 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <div className=" flex-1">
-        <div className="md:block w-100 mt-32 mr-16 hidden">
+      <div className=" flex-1 intro-img" >
+        <div className="md:block w-100 mt-32 mr-16 ">
           <img
             data-aos="fade-left"
             className="rounded-3xl lg:w-[100%] "

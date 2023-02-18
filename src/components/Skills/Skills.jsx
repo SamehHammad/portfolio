@@ -7,6 +7,7 @@ import Node from "../assets/node.png";
 import GitHub from "../assets/github.png";
 import Tailwind from "../assets/tailwind.png";
 import bootstrap from "../assets/bootstrap.png";
+import { useSelector } from "react-redux";
 //    bg-[#5031a9] text-[#ffffff]    border-[#fcd303]
 const skill = [
   {
@@ -52,6 +53,8 @@ const skill = [
 ];
 
 const Skills = () => {
+  const { mode } = useSelector((state) => state.darkMode);
+
   return (
     <div
       name="skills"
@@ -62,10 +65,10 @@ const Skills = () => {
       {/* Container */}
       <div className="cotainer max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="p-b-8  text-center">
-          <p className="text-4xl font-bold inline border-b-4 border-yellow-400 text-center  ">
+          <p className="text-4xl font-bold inline border-b-4 border-yellow-400 text-center  " style={{ color: mode ? "white" : "black" }}>
             Skills
           </p>
-          <p className="py-6 text-2xl">
+          <p className="py-6 text-2xl" style={{ color: mode ? "white" : "black" }}>
             These are the technologies I've worked with
           </p>
         </div>
@@ -76,6 +79,7 @@ const Skills = () => {
               <div
                 key={id}
                 className="shadow-md shadow-[#040c16] rounded-md hover:scale-110 duration-500"
+              style={{backgroundColor:mode?"rgb(189, 187, 184)":"#252E42", color:mode?"#252E42":"rgb(189, 187, 184)"}}
               >
                 <img className="w-20 mt-2 mx-auto " src={img} alt={title} />
                 <p className="my-4">{title}</p>

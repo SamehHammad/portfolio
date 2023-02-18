@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 import Button from "../button/Button";
+import { changeMode } from "../slice/modeSlice";
+import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import "./navbar.css";
 const Navbar = () => {
+  const dispatch = useDispatch();
+
   const { mode } = useSelector((state) => state.darkMode);
 
   const navbar = {
     link1: "home",
-    link2: "work",
+    link2: "My ProJects",
     link3: "skills",
     link4: "About",
     link5: "Contact Me",
@@ -20,10 +24,13 @@ const Navbar = () => {
     setNave(!nav);
   };
   return (
-    <div className="fixed w-full z-50">
+    <div className="fixed w-full z-20" >
       <nav
-      className={mode?"w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#413F3D]":"w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#4c2da2] "}
-       
+        className={
+          mode
+            ? "w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#413F3D]"
+            : "w-full h-[80px] flex justify-between items-center px-4 text-whith capitalize bg-[#4c2da2] "
+        }
       >
         <div className="n-left flex grow items-center gap-4">
           <div
@@ -40,7 +47,29 @@ const Navbar = () => {
           className="n-right hidden md:flex grow text-xl items-center justify-center font-semibold	 "
         >
           <div className="n-list grow-4 ">
-            <ul className="hidden md:flex gap-4 mr-8 cursor-pointer	">
+            <ul className="hidden md:flex gap-4  cursor-pointer 	zzz">
+              <li className="">
+                <div id="darkmode">
+                  <input
+                    type="checkbox"
+                    className="checkbox"
+                    id="checkboxx"
+                    onClick={() => dispatch(changeMode())}
+                  />
+                  <label htmlFor="checkboxx" className="label">
+                    <BsMoonStarsFill
+                      color="white"
+                      style={{ fontSize: "12px" }}
+                    />
+                    <BsFillSunFill
+                      color="yellow"
+                      style={{ fontSize: "12px" }}
+                    />
+                    <div className="ball"></div>
+                  </label>
+                </div>
+              </li>
+
               <li className="">
                 <Link to="home" smooth={true} duration={500}>
                   {navbar.link1}
@@ -52,7 +81,6 @@ const Navbar = () => {
                   {navbar.link2}
                 </Link>
               </li>
-
               <li className="">
                 <Link to="skills" smooth={true} duration={500}>
                   {navbar.link3}
@@ -68,7 +96,7 @@ const Navbar = () => {
                   {navbar.link4}
                 </Link>
               </li> */}
-              <li className="">
+              <li className="resume">
                 <Button />
               </li>
             </ul>
@@ -83,10 +111,26 @@ const Navbar = () => {
         <ul
           className={
             !nav
-              ? "hidden"
-              : "absolute z-10 bg-[#5031a9] bg-opacity-70 font-bold top-0 left-0 w-full  h-screen flex flex-col justify-center items-center cursor-pointer	"
+              ? "hidden "
+              : " absolute z-10 bg-[#5031a9] bg-opacity-70 font-bold top-0 left-0 w-full  h-screen flex flex-col justify-center items-center cursor-pointer"
           }
         >
+          <li className="">
+            <div id="darkmode">
+              <input
+                type="checkbox"
+                className="checkbox"
+                id="checkbox"
+                onClick={() => dispatch(changeMode())}
+              />
+              <label htmlFor="checkbox" className="label">
+                <BsMoonStarsFill color="white" style={{ fontSize: "12px" }} />
+                <BsFillSunFill color="yellow" style={{ fontSize: "12px" }} />
+                <div className="ball"></div>
+              </label>
+            </div>
+          </li>
+
           <li className=" py-6 text-4xl">
             <Link onClick={clickHndler} to="home" smooth={true} duration={500}>
               {navbar.link1}

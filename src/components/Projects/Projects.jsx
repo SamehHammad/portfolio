@@ -2,20 +2,29 @@ import "./projects.css";
 import portfolio from "../assets/portfolio.png";
 import booksStore from "../assets/books-store.png";
 import milionWinner from "../assets/milion.png";
-import SamehTech from "../assets/same7-tech";
-
-
+import SamehTech from "../assets/same7-tech.png";
+import Quran from "../assets/quran.png";
 
 //hover
 import {} from "react-icons/fa";
+import { useSelector } from "react-redux";
 const Projects = () => {
+  const { mode } = useSelector((state) => state.darkMode);
+
   const data = [
     {
+      name: "AL-Quraan Al-kareem ",
+      demo: " https://samehhammad.github.io/quran/",
+      code: "https://github.com/SamehHammad/quran",
+      img: `${Quran}`,
+      lang: ["React", "Redux", "Bootstrap"],
+    },
+    {
       name: "Sameh Tech Store",
-      demo: "https://samehhammad.github.io/",
-      code: "https://github.com/SamehHammad/sameh-tech",
+      demo: " https://samehhammad.github.io/tech/",
+      code: "https://github.com/SamehHammad/tech",
       img: `${SamehTech}`,
-      lang: ["React", "bootstrap", "Redux tollkit"],
+      lang: ["React", "AOS", "Redux tollkit"],
     },
     {
       name: "Books Store",
@@ -48,10 +57,13 @@ const Projects = () => {
       >
         <div className="cotainer max-w[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
           <div className="p-b-8  text-center">
-            <p className="text-4xl font-bold inline border-b-4 border-yellow-400 ">
-              work
+            <p
+              className="text-4xl font-bold inline border-b-4 border-yellow-400 "
+              style={{ color: mode ? "white" : "black" }}
+            >
+              My ProJects
             </p>
-            <p className="py-6 text-2xl">my recent </p>
+            <p className="py-6 text-2xl" style={{ color: mode ? "white" : "black" }}>My Recent </p>
           </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">

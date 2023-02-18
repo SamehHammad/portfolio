@@ -2,8 +2,11 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import "./contact.css";
+import { useSelector } from "react-redux";
 
 const ContactMe = () => {
+  const { mode } = useSelector((state) => state.darkMode);
+
   const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -60,15 +63,24 @@ const ContactMe = () => {
       >
         <div className="mb-3 pt-0">
           <div className="text-center">
-            <p className="text-4xl font-bold inline border-b-4 border-yellow-400 text-center  ">
+            <p
+              className="text-4xl font-bold inline border-b-4 border-yellow-400 text-center  "
+              style={{ color: mode ? "white" : "black" }}
+            >
               Contact Me
             </p>
-            <p className="py-6 text-1xl">eng.sameh1995@gmail.com</p>
-            <p className=" text-1xl text-grey-700">+2 01112967597</p>
+            <p className="py-6 text-1xl"  style={{color: mode ? "white" : "black"}}>eng.sameh1995@gmail.com</p>
+            <p className=" text-1xl text-grey-700"  style={{color: mode ? "white" : "black"}}>+2 01112967597</p>
           </div>
         </div>
         <div className="w-full md:w-96 md:max-w-full mx-auto">
-          <div className="p-6 border border-gray-300 sm:rounded-md">
+          <div
+            className="p-6 border border-gray-300 sm:rounded-md"
+            style={{
+              backgroundColor: mode ? "#BDBBB8" : "#252E42",
+              color: mode ? "black" : "white",
+            }}
+          >
             <form ref={form}>
               <label className="block mb-6">
                 <span className="text-white-700">Your name</span>
