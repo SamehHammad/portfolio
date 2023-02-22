@@ -20,12 +20,13 @@ const Intro = () => {
           className="intro
         flex flex-col justify-center h-screen capitalize max-w[1000px] mx-auto px-8 lg:justify-center lg:items-center"
         >
-          <p className="font-bold text-xl sm:text-4xl ">hi my name is </p>
           <h4
             data-aos="fade-right"
-            className="text-yellow-400 font-bold text-4xl sm:text-6xl "
+            className=" font-bold text-4xl sm:text-6xl name "
           >
-            {intro.name}
+
+<p className="large rise">Hi My Name Is</p>
+<p className="small outline" style={{color:mode ? "yellow" : "black"}}>{intro.name}</p>
           </h4>
 
           <h3 className=" text-4xl sm:text-4xl w-[17rem]">

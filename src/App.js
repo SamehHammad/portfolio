@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Home from "./components/home/intro";
 import Navbar from "./components/nav-bar/nav";
 import Skills from "./components/Skills/Skills";
@@ -11,14 +11,27 @@ import ContactMe from "./components/contact/ContactMe";
 import { useSelector } from "react-redux";
 import { loadFull } from "tsparticles";
 import Particles from "react-particles";
+import Splash from "./components/splash/Splash";
 // import Contact from './components/';
 
 function App() {
+  const [splash, setSplash] = useState(false);
   const { mode } = useSelector((state) => state.darkMode);
 
   useEffect(() => {
     Aos.init();
     Aos.refresh();
+  }, []);
+
+  useEffect(() => {
+    setSplash(true);
+    const splash = () => {
+      setTimeout(() => {
+        setSplash(false);
+      }, 5000);
+      
+    };
+    clearTimeout(splash());
   }, []);
 
   const options = {
@@ -91,14 +104,18 @@ function App() {
     <>
       <Particles options={options} init={particlesInit} />
 
-      <div className={mode ? "m-dark" : "m-light"}>
-        <Navbar />
-        <Home />
-        <Projects />
-        <Skills />
-        <ContactMe />
-        <Footer />
-      </div>
+      {splash ? (
+       <Splash />
+      ) : (
+        <div className={mode ? "m-dark" : "m-light"}>
+          <Navbar />
+          <Home />
+          <Projects />
+          <Skills />
+          <ContactMe />
+          <Footer />
+        </div>
+      )}
     </>
   );
 }
