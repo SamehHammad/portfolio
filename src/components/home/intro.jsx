@@ -14,19 +14,23 @@ const Intro = () => {
     jobTitle: "Front End Web Developer",
   };
   return (
-    <div name="home" className="flex w-full intro-all" >
+    <div name="home" className="flex w-full intro-all">
       <div className=" flex-1 intro-text">
         <div
           className="intro
         flex flex-col justify-center h-screen capitalize max-w[1000px] mx-auto px-8 lg:justify-center lg:items-center"
         >
+          <h5
+            data-aos="fade-right"
+            className=" font-bold text-4xl sm:text-6xl name "
+          >
+            <span class="underlined underline-clip">Hi My Name Is</span>
+          </h5>
           <h4
             data-aos="fade-right"
             className=" font-bold text-4xl sm:text-6xl name "
           >
-
-<p className="large rise">Hi My Name Is</p>
-<p className="small outline" style={{color:mode ? "yellow" : "black"}}>{intro.name}</p>
+            <span class="underlined underline-clip" style={{color:mode?"#FACC15":"#E01E5B"}}>SAMEH HAMMAD</span>
           </h4>
 
           <h3 className=" text-4xl sm:text-4xl w-[17rem]">
@@ -59,7 +63,7 @@ const Intro = () => {
           </div>
         </div>
       </div>
-      <div className=" flex-1 intro-img" >
+      <div className=" flex-1 intro-img">
         <div className="md:block w-100 mt-32 mr-16 ">
           <img
             data-aos="fade-left"

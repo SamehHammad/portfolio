@@ -37,7 +37,7 @@ function App() {
   const options = {
     particles: {
       number: {
-        value: 30,
+        value: 20,
         density: {
           enable: true,
           area: 800,

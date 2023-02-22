@@ -1,51 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
-
-body,
-html {
-  display: grid;
-  font-family: "Audiowide", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=El+Messiri&display=swap");
+h4 span {
+  font-size: clamp(2rem, 5vmin, 15rem);
+  font-family: "Cairo", sans-serif;
+  font-family: "El Messiri", sans-serif;
 }
-p {
-  margin: auto;
+h5 span {
+  font-size: clamp(1rem, 4vmin, 10rem);
+  font-family: "Cairo", sans-serif;
+  font-family: "El Messiri", sans-serif;
 }
-
-.large {
-  font-size: 3rem;
+h4 {
   margin: 2rem;
 }
 
-.small {
-  font-size: 3rem;
+.underlined {
+  /*   background: red; */
+  position: relative;
 }
 
-.rise {
-  text-shadow: -0.01em -0.01em 0.01em #000;
-  animation: rise 2s ease-in-out 0.5s forwards;
-}
-
-@keyframes rise {
-  to {
-    text-shadow: 0em 0.01em #ff5, 0em 0.02em #ff5, 0em 0.02em 0.03em #ff5,
-      -0.01em 0.01em #333, -0.02em 0.02em #333, -0.03em 0.03em #333,
-      -0.04em 0.04em #333, -0.01em -0.01em 0.03em #000,
-      -0.02em -0.02em 0.03em #000, -0.03em -0.03em 0.03em #000;
-    transform: translateY(-0.025em) translateX(0.04em);
-  }
-}
-
-.outline {
-  background-clip: text;
-  color: #ffdd40;
-  animation: outline 1s ease-in-out 1.5s forwards;
-}
-
-@keyframes outline {
-  from {
-    text-shadow: 0em -7em 10em #fff;
-  }
-  to {
-    text-shadow: 0 0.02em #fff, 0.02em 0 #fff, -0.02em 0 #fff, 0 -0.02em #fff;
-  }
+.underline-clip:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3 / 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 6px solid hsl(130 80% 50%);
+  /* Use a clip-path to hide and show the bits you want */
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
 }
 
 .intro-text {

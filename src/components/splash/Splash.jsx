@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import samehImg from "../assets/sameh.jpg";
 import "./splash.css";
 
