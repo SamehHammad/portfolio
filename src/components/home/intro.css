@@ -33,7 +33,7 @@ h4 {
 }
 
 .intro-text {
-  max-width: 40%;
+  max-width: 42%;
 }
 .intro-img {
   max-width: 45%;
@@ -41,7 +41,9 @@ h4 {
 .intro-all {
   justify-content: space-between;
 }
-
+.view-work{
+    margin: 10%;
+}
 @media (max-width: 900px) {
   .intro-all {
     display: flex;
@@ -62,4 +64,8 @@ h4 {
     max-width: 90%;
     margin-bottom: 100px;
   }
+  .view-work{
+    margin: 25%;
 }
+}
+

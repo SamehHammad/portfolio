@@ -33,7 +33,7 @@ const Intro = () => {
             <span class="underlined underline-clip" style={{color:mode?"#FACC15":"#E01E5B"}}>SAMEH HAMMAD</span>
           </h4>
 
-          <h3 className=" text-4xl sm:text-4xl w-[17rem]">
+          <h3 className=" text-3xl sm:text-3xl w-[25rem]">
             <Typewriter
               className=""
               options={{
@@ -43,7 +43,7 @@ const Intro = () => {
               }}
             />
           </h3>
-          <div>
+          <div className="view-work" data-aos="fade-left">
             <button className="group text-xl border-4 px-5 py-2 my-2 flex items-center rounded-2xl font-bold capitalize hover:border-yellow-400 ">
               <Link to="Projects" smooth={true} duration={500}>
                 view work
@@ -52,7 +52,7 @@ const Intro = () => {
                 <HiArrowNarrowRight className="ml-2 " />
               </span>
             </button>
-            <div data-aos="fade-up" className="icons mx-2  flex gap-0">
+            <div data-aos="fade-up" className="icons mx-6  flex gap-0">
               <a href="https://github.com/SamehHammad">
                 <i className="fa-brands fa-github text-4xl mx-3 cursor-pointer  hover:text-yellow-400"></i>
               </a>
