@@ -29,7 +29,6 @@ function App() {
       setTimeout(() => {
         setSplash(false);
       }, 5000);
-      
     };
     clearTimeout(splash());
   }, []);
@@ -105,7 +104,7 @@ function App() {
       <Particles options={options} init={particlesInit} />
 
       {splash ? (
-       <Splash />
+        <Splash />
       ) : (
         <div className={mode ? "m-dark" : "m-light"}>
           <Navbar />

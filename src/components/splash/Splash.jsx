@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
 import samehImg from "../assets/sameh.jpg";
 import "./splash.css";
 
 const Splash = () => {
+   
   return (
     <div className="splash" data-aos="fade-up">
       <div className="main">

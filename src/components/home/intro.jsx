@@ -11,7 +11,7 @@ const Intro = () => {
 
   const intro = {
     name: "Sameh Hammad",
-    jobTitle: "Front End Web Developer",
+    jobTitle: "Front End Web Developer ",
   };
   return (
     <div name="home" className="flex w-full intro-all">
@@ -33,7 +33,7 @@ const Intro = () => {
             <span class="underlined underline-clip" style={{color:mode?"#FACC15":"#E01E5B"}}>SAMEH HAMMAD</span>
           </h4>
 
-          <h3 className=" text-3xl sm:text-3xl w-[25rem]">
+          <h3 className=" text-4xl sm:text-2xl my-4 w-[28rem] jop-title">
             <Typewriter
               className=""
               options={{
@@ -44,9 +44,9 @@ const Intro = () => {
             />
           </h3>
           <div className="view-work" data-aos="fade-left">
-            <button className="group text-xl border-4 px-5 py-2 my-2 flex items-center rounded-2xl font-bold capitalize hover:border-yellow-400 ">
+            <button className="group text-3xl border-4 px-5 py-2 my-2 flex items-center rounded-2xl font-bold capitalize hover:border-yellow-400 ">
               <Link to="Projects" smooth={true} duration={500}>
-                view work
+                View Work
               </Link>
               <span className=" group-hover:rotate-90 decoration-1000 group-hover:text-yellow-400">
                 <HiArrowNarrowRight className="ml-2 " />
@@ -54,10 +54,16 @@ const Intro = () => {
             </button>
             <div data-aos="fade-up" className="icons mx-6  flex gap-0">
               <a href="https://github.com/SamehHammad">
-                <i className="fa-brands fa-github text-4xl mx-3 cursor-pointer  hover:text-yellow-400"></i>
+                <i className="fa-brands fa-github text-4xl mx-3 cursor-pointer  github-icon"></i>
               </a>
               <a href="https://www.linkedin.com/in/sameh-hammad-b20019246/">
-                <i className="fa-brands fa-linkedin-in text-4xl mx-3 cursor-pointer  hover:text-yellow-400"></i>
+                <i className="fa-brands fa-linkedin-in text-4xl mx-3 cursor-pointer  linkedin-icon"></i>
+              </a>
+              <a href="https://www.facebook.com/same7.hammad/">
+                <i className="fa-brands fa-facebook text-4xl mx-3 cursor-pointer  facebook-icon"></i>
+              </a>
+              <a href="https://twitter.com/SamehHammad17">
+                <i className="fa-brands fa-twitter text-4xl mx-3 cursor-pointer twitter-icon"></i>
               </a>
             </div>
           </div>

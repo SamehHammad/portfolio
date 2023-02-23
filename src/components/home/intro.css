@@ -23,7 +23,7 @@ h4 {
   position: absolute;
   top: 95%;
   width: 150%;
-  aspect-ratio: 3 / 1;
+  aspect-ratio: 6 / 1;
   left: 50%;
   transform: translate(-50%, 0);
   border-radius: 50%;
@@ -41,8 +41,25 @@ h4 {
 .intro-all {
   justify-content: space-between;
 }
-.view-work{
-    margin: 10%;
+.view-work {
+  max-width: 100%;
+  margin: 10%;
+}
+.jop-title {
+  font-size: 2rem;
+  margin-left: 3rem;
+}
+.twitter-icon:hover {
+  color: #2aa9e2;
+}
+.facebook-icon:hover {
+  color: #43609D;
+}
+.github-icon:hover {
+  color: #313131;
+}
+.linkedin-icon:hover {
+  color: #107BB7;
 }
 @media (max-width: 900px) {
   .intro-all {
@@ -50,7 +67,7 @@ h4 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
+    width: 95%;
     text-align: center;
   }
   .intro-text,
@@ -64,8 +81,8 @@ h4 {
     max-width: 90%;
     margin-bottom: 100px;
   }
-  .view-work{
-    margin: 25%;
+  .jop-title {
+    font-size: 1.8rem;
+    margin: 0;
+  }
 }
-}
-
