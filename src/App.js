@@ -28,11 +28,10 @@ function App() {
     const splash = () => {
       setTimeout(() => {
         setSplash(false);
-      }, 5000);
+      }, 6000);
     };
     clearTimeout(splash());
   }, []);
-
   const options = {
     particles: {
       number: {
@@ -52,7 +51,7 @@ function App() {
         value: 1,
       },
       size: {
-        value: { min: 1, max: 8 },
+        value: { min: 1, max: 7 },
       },
       links: {
         enable: false,
@@ -63,9 +62,9 @@ function App() {
       },
       move: {
         enable: true,
-        speed: 1,
+        speed: 0.5,
         direction: "none",
-        random: true,
+        random: false,
         straight: false,
         outModes: "out",
       },

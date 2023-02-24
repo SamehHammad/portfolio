@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo&family=El+Messiri&display=swap");
-h4 span {
+.intro {
+  font-family: "Cairo", sans-serif;
+  font-family: "El Messiri", sans-serif;
+}
+.name {
   font-size: clamp(2rem, 5vmin, 15rem);
   font-family: "Cairo", sans-serif;
   font-family: "El Messiri", sans-serif;
 }
 h5 span {
   font-size: clamp(1rem, 4vmin, 10rem);
-  font-family: "Cairo", sans-serif;
-  font-family: "El Messiri", sans-serif;
 }
 h4 {
   margin: 2rem;
@@ -40,35 +42,43 @@ h4 {
 }
 .intro-all {
   justify-content: space-between;
+  max-width: 95%;
 }
 .view-work {
   max-width: 100%;
   margin: 10%;
 }
 .jop-title {
-  font-size: 2rem;
-  margin-left: 3rem;
+  font-size: 2.1rem;
+  width: 100%;
 }
 .twitter-icon:hover {
   color: #2aa9e2;
 }
 .facebook-icon:hover {
-  color: #43609D;
+  color: #43609d;
 }
 .github-icon:hover {
   color: #313131;
 }
 .linkedin-icon:hover {
-  color: #107BB7;
+  color: #107bb7;
+}
+.icons {
+  position: absolute;
+  left: 8rem;
 }
 @media (max-width: 900px) {
+  .icons {
+    position: absolute;
+    left: 1.5rem;
+  }
   .intro-all {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 95%;
-    text-align: center;
+    width: 75%;
   }
   .intro-text,
   .intro-text {
@@ -79,10 +89,27 @@ h4 {
   }
   .intro-img {
     max-width: 90%;
-    margin-bottom: 100px;
+    width: 75%;
+    margin: 10rem 0rem 10rem 5rem;
+  
+  }
+  .view-work button {
+    width: 10rem;
   }
   .jop-title {
-    font-size: 1.8rem;
-    margin: 0;
+    font-size: 1rem;
+    text-align: start;
+    width: 13rem;
+  }
+  .name {
+    max-width: 25rem;
+    width: 10rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: start;
+  }
+  h5 span {
+    width: 13rem;
+    margin-left: 2.5rem;
   }
 }
