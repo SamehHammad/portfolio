@@ -199,15 +199,18 @@ const ContactMe = ({ children }) => {
             </form>
           </div>
 
-          <div
-            className="views-counter border-4  mt-4 font-bold text-xl rounded-xl hover:text-yellow hover:border-yellow-400 "
-            style={{ color: mode ? "white" : "black" }}
-          >
-            <div className="views-note cursor-pointer">
+          <div className="views-counter mt-4 font-bold text-xl rounded-xl hover:text-yellow hover:border-yellow-400 ">
+            <div
+              className="views-note cursor-pointer"
+              style={{ border: mode ? "1px solid white" : "1px solid black" }}
+            >
               <p>({children}) عدد المشاهدات</p>
             </div>
-            <FaEye className="views-icon " />
-            <h1> {children}</h1>
+            <FaEye
+              className="views-icon "
+              style={{ color: mode ? "white" : "black" }}
+            />
+            <h1 style={{ color: mode ? "white" : "black" }}> {children}</h1>
           </div>
         </div>
       </div>
