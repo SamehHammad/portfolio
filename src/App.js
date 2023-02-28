@@ -12,19 +12,28 @@ import { useSelector } from "react-redux";
 import { loadFull } from "tsparticles";
 import Particles from "react-particles";
 import Splash from "./components/splash/Splash";
+import axios from "axios";
 // import Contact from './components/';
 
 function App() {
   const [splash, setSplash] = useState(false);
   const { mode } = useSelector((state) => state.darkMode);
+  const [view, setView] = useState(0);
 
   useEffect(() => {
     Aos.init();
     Aos.refresh();
   }, []);
-
   useEffect(() => {
-    setSplash(true);
+    axios
+      .get("https://api.countapi.xyz/update/sameh-portfolio/counter/?amount=1")
+      .then(function (response) {
+        setView(response.data.value);
+      });
+      
+  }, []);
+  useEffect(() => {
+    setSplash(false);
     const splash = () => {
       setTimeout(() => {
         setSplash(false);
@@ -76,7 +85,7 @@ function App() {
           mode: "grab",
         },
         onClick: {
-          enable: true,
+          enable: false,
           mode: "push",
         },
       },
@@ -110,7 +119,7 @@ function App() {
           <Home />
           <Projects />
           <Skills />
-          <ContactMe />
+          <ContactMe children={view}/>
           <Footer />
         </div>
       )}

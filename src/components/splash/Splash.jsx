@@ -18,7 +18,6 @@ const Splash = () => {
     }, 1000);
     return () => clearInterval(timer);
   });
-  console.log(time);
 
   return (
     <div className="splash" data-aos="fade-up">

@@ -1,16 +1,18 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import "./contact.css";
 import { useSelector } from "react-redux";
+import { FaEye } from "react-icons/fa";
 
-const ContactMe = () => {
+const ContactMe = ({ children }) => {
   const { mode } = useSelector((state) => state.darkMode);
 
   const form = useRef();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [massege, setMassege] = useState("");
+
   const handleValue = (e) => {
     if (email.includes("@") && name) {
       emailjs
@@ -54,12 +56,12 @@ const ContactMe = () => {
   return (
     <div
       name="Contact"
-      className="text-white"
+      className="text-white cotainer max-w-[1000px] mx-auto p-4 flex flex-col"
       data-aos-anchor-placement="fade-right"
     >
       <div
         className="h-screen flex flex-col 
-      items-center justify-center"
+      items-center justify-center "
       >
         <div className="mb-3 pt-0">
           <div className="text-center">
@@ -69,8 +71,18 @@ const ContactMe = () => {
             >
               Contact Me
             </p>
-            <p className="py-6 text-1xl"  style={{color: mode ? "white" : "black"}}>eng.sameh1995@gmail.com</p>
-            <p className=" text-1xl text-grey-700"  style={{color: mode ? "white" : "black"}}>+2 01112967597</p>
+            <p
+              className="py-6 text-1xl"
+              style={{ color: mode ? "white" : "black" }}
+            >
+              eng.sameh1995@gmail.com
+            </p>
+            <p
+              className=" text-1xl text-grey-700"
+              style={{ color: mode ? "white" : "black" }}
+            >
+              +2 01112967597
+            </p>
           </div>
         </div>
         <div className="w-full md:w-96 md:max-w-full mx-auto">
@@ -184,8 +196,18 @@ const ContactMe = () => {
                   ""
                 )}
               </div>
-              <div></div>
             </form>
+          </div>
+
+          <div
+            className="views-counter border-4  mt-4 font-bold text-xl rounded-xl hover:text-yellow hover:border-yellow-400 "
+            style={{ color: mode ? "white" : "black" }}
+          >
+            <div className="views-note cursor-pointer">
+              <p>({children}) عدد المشاهدات</p>
+            </div>
+            <FaEye className="views-icon " />
+            <h1> {children}</h1>
           </div>
         </div>
       </div>
