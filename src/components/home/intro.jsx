@@ -22,7 +22,7 @@ const Intro = () => {
         >
           <h5
             data-aos="fade-right"
-            className=" font-bold text-4xl mt-5 sm:text-6xl name "
+            className=" font-bold text-xl mt-5 sm:text-l  "
           >
             <span className="underlined underline-clip">Hi My Name Is</span>
           </h5>

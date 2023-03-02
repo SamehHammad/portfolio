@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import "./contact.css";
 import { useSelector } from "react-redux";
 import { FaEye } from "react-icons/fa";
+import MyChatbot from "../Chatbot/MyChatbot";
 
 const ContactMe = ({ children }) => {
   const { mode } = useSelector((state) => state.darkMode);
@@ -187,10 +188,13 @@ const ContactMe = ({ children }) => {
                   <button
                     type="submit"
                     className="
-                    focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                    focus:outline-none text-white bg-red-700 hover:bg-red-800
+                     focus:ring-4 focus:ring-red-300 font-medium rounded-lg 
+                     text-sm px-5 py-2.5 ml-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 
+                     dark:focus:ring-red-900"
                     onClick={() => clearInputs()}
                   >
-                    Clear EveryThing
+                    Clear
                   </button>
                 ) : (
                   ""
@@ -199,7 +203,7 @@ const ContactMe = ({ children }) => {
             </form>
           </div>
 
-          <div className="views-counter mt-4 font-bold text-xl rounded-xl hover:text-yellow hover:border-yellow-400 ">
+          <div className="mb-5 views-counter mt-4 font-bold text-xl rounded-xl hover:text-yellow hover:border-yellow-400 ">
             <div
               className="views-note cursor-pointer"
               style={{ border: mode ? "1px solid white" : "1px solid black" }}
@@ -213,6 +217,7 @@ const ContactMe = ({ children }) => {
             <h1 style={{ color: mode ? "white" : "black" }}> {children}</h1>
           </div>
         </div>
+        <MyChatbot />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import Navbar from "./components/nav-bar/nav";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/footer/footer";
+import MyChatbot from "./components/Chatbot/MyChatbot";
 import "./App.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,6 +14,7 @@ import { loadFull } from "tsparticles";
 import Particles from "react-particles";
 import Splash from "./components/splash/Splash";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
 // import Contact from './components/';
 
 function App() {
@@ -27,13 +29,12 @@ function App() {
   useEffect(() => {
     axios
       .get("https://api.countapi.xyz/update/sameh-portfolio/counter/?amount=1")
-      .then(function (response) {
+      .then(function(response) {
         setView(response.data.value);
       });
-      
   }, []);
   useEffect(() => {
-    setSplash(false);
+    setSplash(true);
     const splash = () => {
       setTimeout(() => {
         setSplash(false);
@@ -119,7 +120,7 @@ function App() {
           <Home />
           <Projects />
           <Skills />
-          <ContactMe children={view}/>
+          <ContactMe children={view} />
           <Footer />
         </div>
       )}
